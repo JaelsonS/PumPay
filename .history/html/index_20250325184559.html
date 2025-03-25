@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PumPay - HOME</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Pum<span>Pay</span></div>
+                <button class="mobile-menu-btn">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#" class="cta-button">Baixar App</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Desafie Seus Amigos a Ficar em Forma</h1>
+            <p>Junte-se a uma comunidade de entusiastas do fitness que se motivam através de desafios amigáveis e incentivos financeiros. Mantenha-se comprometido e ganhe recompensas pelos seus treinos!</p>
+            <div class="hero-buttons">
+                <a href="#" class="cta-button">Baixar App</a>
+                <a href="#como-funciona" class="secondary-button">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section class="features" id="como-funciona">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como o FitChallenge Funciona</h2>
+                <p>Transforme sua rotina de exercícios com motivação social e incentivos financeiros</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Crie Desafios</h3>
+                    <p>Organize desafios privados ou públicos com seus amigos. Escolha a duração, tipo de exercício e valor da aposta.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Check-ins Diários</h3>
+                    <p>Poste fotos como prova dos seus treinos para registrar diariamente. Nosso sistema de verificação garante justiça.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Ganhe Prêmios</h3>
+                    <p>Complete seu desafio para receber seu dinheiro de volta mais uma parte do prêmio daqueles que não concluíram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Login -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <h2>Login no PumPay</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="login-button">Entrar</button>
+                </form>
+                <div class="login-footer">
+                    <p>Não tem uma conta? <a href="#">Cadastre-se aqui</a></p>
+                    <p>ou continue com <a href="#">Google</a> ou <a href="#">Apple</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PumPay</h3>
+                    <p>Tornando o fitness divertido e recompensador através de desafios sociais e competições amigáveis.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Conecte-se</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PumPay. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu mobile toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Formulário de login
+        const loginForm = document.getElementById('loginForm');
+        
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Aqui você normalmente enviaria esses dados para seu backend
+            console.log('Tentativa de login com:', { email, password });
+            
+            // Para demonstração, apenas um alerta
+            alert('A funcionalidade de login se conectaria ao seu backend. Por enquanto, é apenas uma demonstração.');
+        });
+        
+        // Rolagem suave para links âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
