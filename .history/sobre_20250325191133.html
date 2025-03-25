@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre o FitChallenge - Desafios Fitness Sociais</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>PumPay - SOBRE</title>
+    <link rel="stylesheet" href="style.css">
    
 </head>
 <body>
@@ -38,12 +38,12 @@
             <div class="about-section">
                 <h2>Nossa História</h2>
                 <p>O PumPay nasceu de uma observação simples: as pessoas têm mais chances de manter seus objetivos fitness quando têm responsabilidade social e incentivos tangíveis. Nosso fundador, um entusiasta do fitness e empreendedor de tecnologia, tinha dificuldade em manter a consistência nos treinos até começar a fazer apostas amigáveis com seus amigos de treino.</p>
-                <p>Percebendo o poder dessa abordagem, criamos uma plataforma que torna os desafios fitness fáceis de configurar, divertidos de participar e recompensadores para quem se mantém comprometido. Hoje, o FitChallenge cresceu para se tornar uma comunidade global de indivíduos motivados ajudando uns aos outros a alcançar seus objetivos fitness.</p>
+                <p>Percebendo o poder dessa abordagem, criamos uma plataforma que torna os desafios fitnes faceis de configurar, divertidos de participar e recompensadores para quem se mantém comprometido. Hoje, o PumPay cresceu para se tornar uma comunidade global de indivíduos motivados ajudando uns aos outros a alcançar seus objetivos fitness.</p>
             </div>
             
             <div class="about-section">
                 <h2>Como Funciona</h2>
-                <p>O FitChallenge combina redes sociais com gamificação e incentivos financeiros para criar a ferramenta definitiva de motivação fitness:</p>
+                <p>O PumPay combina redes sociais com gamificação e incentivos financeiros para criar a ferramenta definitiva de motivação fitness:</p>
                 <ol>
                     <li><strong>Crie ou Participe de um Desafio:</strong> Organize um desafio privado com amigos ou junte-se a um público. Escolha a duração (7, 14, 30 dias, etc.) e o tipo de exercício.</li>
                     <li><strong>Defina Sua Aposta:</strong> Cada participante contribui para o prêmio (ex: R$100). Isso cria um incentivo poderoso para completar seus treinos.</li>
@@ -81,22 +81,21 @@
             </div>
         </div>
     </section>
-
     <!-- Rodapé -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>FitChallenge</h3>
-                    <p>Tornando o fitness divertido e recompensador através de desafios sociais e competições amigáveis.</p>
+                    <h3>PumPay</h3>
+                    <p>Tornando o fitnes divertido e recompensador através de desafios sociais e competições amigáveis.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="sobre.html">SOBRE</a></li>
+                        <li><a href="produtos.html">PRODUTOS</a></li>
+                        <li><a href="#">BLOG</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -119,13 +118,51 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 FitChallenge. Todos os direitos reservados.</p>
+                <p>&copy; 2025 PumPay. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Reutilize o mesmo JavaScript do index.html
+          // Menu mobile toggle
+          const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Formulário de login
+        const loginForm = document.getElementById('loginForm');
+        
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Aqui você normalmente enviaria esses dados para seu backend
+            console.log('Tentativa de login com:', { email, password });
+            
+            // Para demonstração, apenas um alerta
+            alert('A funcionalidade de login se conectaria ao seu backend. Por enquanto, é apenas uma demonstração.');
+        });
+        
+        // Rolagem suave para links âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
