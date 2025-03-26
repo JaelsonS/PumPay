@@ -413,7 +413,7 @@ footer {
 
 /* Estilos da Página de Produtos */
 .products-hero {
-    
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: white;
     padding: 100px 0;
     text-align: center;
